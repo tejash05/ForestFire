@@ -17,6 +17,9 @@ standard_scaler=pickle.load(open('models/scaler.pkl','rb'))
 def index():
     return render_template('index.html')    
 
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 @app.route('/predictdata',methods=['GET','POST'])
 def predict_datapoint():
